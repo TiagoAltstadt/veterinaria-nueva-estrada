@@ -7,13 +7,20 @@
     justify-items: center;
     width: var(--space-56px);
     height: 100vh;
-    background-color: pink;
-    padding: var(--space-8px);
+    background-color: var(--color-pink);
+    padding: 4px;
     #logo {
-      width: 100%;
+      width: var(--space-42px);
+    }
+    .icon-class {
+      font-size: var(--font-16px);
+      width: var(--space-56px);
+      height: var(--space-56px);
+      color: black;
     }
   }
-  #main-container{
-    padding-left: 8px;
+  #main-container {
+    margin: 0px;
+    width: 100%;
   }
 }

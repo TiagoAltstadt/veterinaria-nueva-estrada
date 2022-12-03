@@ -1,0 +1,15 @@
+#main {
+  width: 100%;
+  height: var(--space-64px);
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: var(--space-8px);
+  #title {
+    align-items: center;
+    width: fit-content;
+    font-size: var(--font-24px);
+  }
+}

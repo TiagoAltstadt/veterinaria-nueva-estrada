@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HomePageComponent } from '../pages/home/home-page.component';
+import { TopbarComponent } from './generic/topbar/topbar.component';
+import { MainContentComponent } from './home-components/main-content/main-content.component';
 
-const components: any[] = [HomePageComponent];
+const components: any[] = [
+  TopbarComponent,
+  MainContentComponent,
+];
 @NgModule({
   imports: [RouterModule],
   declarations: [...components],

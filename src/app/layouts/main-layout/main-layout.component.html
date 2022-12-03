@@ -5,6 +5,14 @@
       alt="Veterinaria Estrada"
       id="logo"
     />
+    <ng-container *ngFor="let item of menuOptions">
+      <div
+        [style.background-image]="
+          'url(/assets/Icons/' + item.icon + '.svg' + ')'
+        "
+        class="icon-class"
+      ></div>
+    </ng-container>
   </div>
   <div id="main-container">
     <router-outlet></router-outlet>

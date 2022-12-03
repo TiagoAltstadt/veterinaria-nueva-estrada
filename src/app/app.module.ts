@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { LayoutsModule } from './layouts/layouts.module';
-import { TopbarComponent } from './components/generic/topbar/topbar.component';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
-  declarations: [AppComponent, TopbarComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, LayoutsModule],
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    LayoutsModule,
+    ComponentsModule,
+  ],
   exports: [],
   providers: [],
   bootstrap: [AppComponent],
