@@ -1,18 +1,20 @@
 <section id="main">
   <div id="layout-container">
     <img
-      src="../../../assets/Images/Logos/rounded-logo.png"
+      [src]="logo"
       alt="Veterinaria Estrada"
       id="logo"
     />
-    <ng-container *ngFor="let item of menuOptions">
-      <div
-        [style.background-image]="
-          'url(/assets/Icons/' + item.icon + '.svg' + ')'
-        "
-        class="icon-class"
-      ></div>
-    </ng-container>
+    <div class="options-container" *ngFor="let item of menuOptions">
+      <a (click)="optionClicked(item.url)">
+        <img
+          [src]="'/assets/Icons/' + item.icon + '.svg'"
+          alt="image"
+          class="icon-class"
+        />
+        <span class="tooltiptext">{{ item.label }}</span>
+      </a>
+    </div>
   </div>
   <div id="main-container">
     <router-outlet></router-outlet>

@@ -1,9 +1,24 @@
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(./assets/fonts/ubuntu-font/Ubuntu-Regular.ttf) format("ttf");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+* {
+  font-family: "Ubuntu", sans-serif;
+}
 body {
   margin: 0px;
 }
 :root {
   // Paleta de colores
   --color-pink: pink;
+  --color-dark-pink: rgb(214, 161, 170);
+  --color-grey: rgb(241, 241, 241);
+  --color-dark-grey: rgb(214, 214, 214);
   // Tamaños de fonts
   --font-32px: 2em;
   --font-24px: 1.5em;

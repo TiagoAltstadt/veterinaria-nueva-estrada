@@ -9,6 +9,24 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'about-us',
+    component: MainLayoutComponent,
+    loadChildren: () =>
+      import('./pages/about-us/about-us.module').then((m) => m.AboutUsModule),
+  },
+  {
+    path: 'mission',
+    component: MainLayoutComponent,
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'contact',
+    component: MainLayoutComponent,
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
+  },
 ];
 
 @NgModule({

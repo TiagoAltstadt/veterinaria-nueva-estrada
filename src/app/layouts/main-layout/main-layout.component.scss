@@ -5,18 +5,53 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
+    align-items: center;
     width: var(--space-56px);
     height: 100vh;
     background-color: var(--color-pink);
+    border-right: 1px solid var(--color-dark-pink);
     padding: 4px;
     #logo {
-      width: var(--space-42px);
-    }
-    .icon-class {
-      font-size: var(--font-16px);
       width: var(--space-56px);
-      height: var(--space-56px);
-      color: black;
+      margin-bottom: var(--space-16px);
+    }
+    .options-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: var(--space-32px);
+      height: var(--space-32px);
+      border-radius: var(--space-24px);
+      margin: var(--space-8px) 0px;
+      
+      .icon-class {
+        width: var(--space-24px);
+        height: var(--space-24px);
+        color: black;
+      }
+    }
+    .options-container:hover {
+      background-color: var(--color-dark-pink);
+    }
+    .options-container .tooltiptext {
+      position: relative;
+      left: var(--space-48px);
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 1;
+    }
+    .options-container:hover .tooltiptext {
+      visibility: visible;
     }
   }
   #main-container {
