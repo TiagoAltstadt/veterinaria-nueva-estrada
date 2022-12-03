@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0px;
+}
+:root {
+  // Tamaño de espacios (Margenes y paddings)
+  --space-96px: 96px;
+  --space-88px: 88px;
+  --space-80px: 80px;
+  --space-72px: 72px;
+  --space-64px: 64px;
+  --space-56px: 56px;
+  --space-48px: 48px;
+  --space-40px: 40px;
+  --space-32px: 32px;
+  --space-24px: 24px;
+  --space-16px: 16px;
+  --space-8px: 8px;
+  --space-120px: 120px;
+}

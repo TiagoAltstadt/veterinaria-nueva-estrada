@@ -1,0 +1,19 @@
+#main {
+  display: flex;
+  flex-direction: row;
+  #layout-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: var(--space-56px);
+    height: 100vh;
+    background-color: pink;
+    padding: var(--space-8px);
+    #logo {
+      width: 100%;
+    }
+  }
+  #main-container{
+    padding-left: 8px;
+  }
+}

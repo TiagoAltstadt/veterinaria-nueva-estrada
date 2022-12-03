@@ -1,0 +1,867 @@
+// Box Shadows
+@mixin shadow-generator() {
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+// Button Shadow
+@mixin button-shadow-generator($opacity) {
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, $opacity);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, $opacity);
+}
+
+// Box Shadow Card Type
+@mixin shadow-card-generator() {
+  -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+@mixin shadow-card-generator-soft() {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+}
+
+@mixin shadow-card-generator-hover() {
+  -webkit-box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.3),
+    0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.3),
+    0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px 10px 0 rgba(0, 0, 0, 0.1),
+    0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color) {
+  -webkit-box-shadow: $top $left $blur $spread $color;
+  -moz-box-shadow: $top $left $blur $spread $color;
+  box-shadow: $top $left $blur $spread $color;
+}
+
+// Box Shadow 1
+@mixin shadow-1() {
+  -webkit-box-shadow: 0 2px 3px 0 rgba(42, 42, 42, 0.05);
+  -moz-box-shadow: 0 2px 3px 0 rgba(42, 42, 42, 0.05);
+  box-shadow: 0 2px 3px 0 rgba(42, 42, 42, 0.05);
+}
+
+// Box Shadow 2
+@mixin shadow-2() {
+  -webkit-box-shadow: 0 2px 3px 0 rgba(42, 42, 42, 0.1);
+  -moz-box-shadow: 0 2px 3px 0 rgba(42, 42, 42, 0.1);
+  box-shadow: 0 2px 3px 0 rgba(42, 42, 42, 0.1);
+}
+
+// Box Shadow 3
+@mixin shadow-3() {
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(42, 42, 42, 0.16);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(42, 42, 42, 0.16);
+  box-shadow: 0px 3px 6px 0px rgba(42, 42, 42, 0.16);
+}
+
+// Box Shadow 4
+@mixin shadow-4() {
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.35);
+}
+
+// Box Shadow 5
+@mixin shadow-5() {
+  -webkit-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.45);
+}
+
+// Border radius
+@mixin border-radius-generator($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Transitions
+@mixin transition-generator($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// Transitions
+@mixin transition-two-generator($args, $args2) {
+  -webkit-transition: $args + ', ' + $args2;
+  -moz-transition: $args + ', ' + $args2;
+  -ms-transition: $args + ', ' + $args2;
+  -o-transition: $args + ', ' + $args2;
+  transition: $args + ', ' + $args2;
+}
+
+// Disable text selection for UI
+@mixin disable-text-selection-generator() {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+// Rotate
+@mixin rotate-generator($rotation) {
+  -webkit-transform: rotate($rotation);
+  -moz-transform: rotate($rotation);
+  -o-transform: rotate($rotation);
+  -ms-transform: rotate($rotation);
+  transform: rotate($rotation);
+}
+
+// Display flex
+@mixin display-flex-generator() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+
+  // Cantidad de veces que se repit
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: infini1te;
+
+  // En que estado queda la animacion al terminar (forwards: ultimo frame)
+  -webkit-animation-fill-mode: forwards; /* it works with Chrome */
+  -moz-animation-fill-mode: forwards; /* works with Mozilla Firefox */
+  -ms-animation-fill-mode: forwards; /* works with IE */
+  -o-animation-fill-mode: forwards; /* works with Opera */
+  animation-fill-mode: forwards; /* should work with all browser .... in theory */
+}
+
+@include keyframes(slide-down) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ACM: Animación para los Chip Ubication */
+@include keyframes(createFromLeft) {
+  0% {
+    -moz-transform: scale(0); /* Firefox */
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0); /* Opera */
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0); /* Safari And Chrome */
+    -webkit-transform-origin: 0 0;
+    transform: scale(0); /* Standard Property */
+    transform-origin: 0 0; /* Standard Property */
+  }
+  100% {
+    -moz-transform: scale(1); /* Firefox */
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1); /* Opera */
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1); /* Safari And Chrome */
+    -webkit-transform-origin: 0 0;
+    transform: scale(1); /* Standard Property */
+    transform-origin: 0 0; /* Standard Property */
+  }
+}
+
+/* ACM: Animación para la carga de contenedor de pasos */
+@include keyframes(showFromBottom_step1) {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -78px;
+    opacity: 1;
+  }
+}
+
+/* ACM: Animación para la carga de contenedor de pasos */
+@include keyframes(showFromBottom) {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -48px;
+    opacity: 1;
+  }
+}
+
+/* ACM: Animación para la carga de contenedor de ABMACM */
+@include keyframes(showFromBottom_ABMACM) {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -176px;
+    opacity: 1;
+  }
+}
+
+/* Panel ACM/BA: Animación para la carga de contenedor */
+@include keyframes(loadPanelACMBA) {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -176px;
+    opacity: 1;
+  }
+}
+
+/* ACM: Animación para cuando carga un listado de items */
+@include keyframes(showFromBottomItemList) {
+  0% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeOutHide) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+  }
+}
+
+@include keyframes(fadeOutHide2) {
+  0% {
+    opacity: 1;
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+    height: 0;
+  }
+}
+
+@include keyframes(showDialog) {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+}
+
+@include keyframes(showAndHide) {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+    -moz-transform: scale(0); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(0); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(0); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(0); /* Standard Property */
+    transform-origin: center center;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+    -moz-transform: scale(1); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(1); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(1); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(1); /* Standard Property */
+    transform-origin: center center;
+  }
+}
+
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(scaleFromCenter) {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(0); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(0); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(0); /* Standard Property */
+    transform-origin: center center;
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(1); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(1); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(1); /* Standard Property */
+    transform-origin: center center;
+  }
+}
+
+@include keyframes(callAtention) {
+  0% {
+    background-color: #b5ddfd;
+    color: #403f3f;
+  }
+  100% {
+    background-color: #fff;
+    color: #707070;
+  }
+}
+
+@include keyframes(blockScrollBody) {
+  0% {
+    position: inherit;
+  }
+  100% {
+    position: fixed;
+  }
+}
+
+@include keyframes(hideFromBottom) {
+  0% {
+    pointer-events: none;
+    max-height: 1000px;
+  }
+  100% {
+    pointer-events: auto;
+    max-height: 0;
+  }
+}
+
+// Box sizing
+@mixin border-sizing() {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+$prefixes: -webkit-, -moz-, -o-, '';
+
+// Border radius custom
+@mixin border-radius-custom(
+  $topLeft: 0,
+  $topRight: 0,
+  $bottomRight: 0,
+  $bottomLeft: 0
+) {
+  @each $prefix in $prefixes {
+    @if $prefix == '-moz-' {
+      @if $topLeft != 0 {
+        -moz-border-radius-topleft: $topLeft;
+      }
+      @if $topRight != 0 {
+        -moz-border-radius-topright: $topRight;
+      }
+      @if $bottomRight != 0 {
+        -moz-border-radius-bottomright: $bottomRight;
+      }
+      @if $bottomLeft != 0 {
+        -moz-border-radius-bottomleft: $bottomLeft;
+      }
+    } @else {
+      @if $topLeft != 0 {
+        #{$prefix}border-top-left-radius: $topLeft;
+      }
+      @if $topRight != 0 {
+        #{$prefix}border-top-right-radius: $topRight;
+      }
+      @if $bottomRight != 0 {
+        #{$prefix}border-bottom-right-radius: $bottomRight;
+      }
+      @if $bottomLeft != 0 {
+        #{$prefix}border-bottom-left-radius: $bottomLeft;
+      }
+    }
+  }
+}
+
+@include keyframes(scaleAndReduceFromCenter) {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(0); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(0); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(0); /* Standard Property */
+    transform-origin: center center;
+  }
+  90% {
+    opacity: 1;
+    -moz-transform: scale(1.1); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(1.1); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(1.1); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(1.1); /* Standard Property */
+    transform-origin: center center;
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(1); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(1); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(1); /* Standard Property */
+    transform-origin: center center;
+  }
+}
+
+
+// Box Shadows
+@mixin shadow() {
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+// Button Shadow
+@mixin button-shadow($opacity) {
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, $opacity);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, $opacity);
+}
+
+// Box Shadow Card Type
+@mixin shadow-card() {
+  -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+@mixin shadow-card-soft() {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+}
+
+@mixin shadow-card-hover() {
+  -webkit-box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.3),
+    0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.3),
+    0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px 10px 0 rgba(0, 0, 0, 0.1),
+    0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color) {
+  -webkit-box-shadow: $top $left $blur $spread $color;
+  -moz-box-shadow: $top $left $blur $spread $color;
+  box-shadow: $top $left $blur $spread $color;
+}
+
+// Box Shadow 1
+@mixin shadow-1() {
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+// Box Shadow 2
+@mixin shadow-2() {
+  -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+// Box Shadow 3
+@mixin shadow-3() {
+  -webkit-box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+// Box Shadow 4
+@mixin shadow-4() {
+  -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.26);
+}
+
+// Box Shadow 5
+@mixin shadow-5() {
+  -webkit-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.45);
+}
+
+// Border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Transitions
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// Transitions
+@mixin transition-two($args, $args2) {
+  -webkit-transition: $args + ", " + $args2;
+  -moz-transition: $args + ", " + $args2;
+  -ms-transition: $args + ", " + $args2;
+  -o-transition: $args + ", " + $args2;
+  transition: $args + ", " + $args2;
+}
+
+// Disable text selection for UI
+@mixin disable-text-selection() {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+// Rotate
+@mixin rotate($rotation) {
+  -webkit-transform: rotate($rotation);
+  -moz-transform: rotate($rotation);
+  -o-transform: rotate($rotation);
+  -ms-transform: rotate($rotation);
+  transform: rotate($rotation);
+}
+
+// Display flex
+@mixin display-flex($vertical-align: false, $horizontal-align: false) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @if $vertical-align {
+    align-items: center;
+  }
+  @if $horizontal-align {
+    justify-content: center;
+  }
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+
+  // Cantidad de veces que se repit
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: infini1te;
+
+  // En que estado queda la animacion al terminar (forwards: ultimo frame)
+  -webkit-animation-fill-mode: forwards; /* it works with Chrome */
+  -moz-animation-fill-mode: forwards; /* works with Mozilla Firefox */
+  -ms-animation-fill-mode: forwards; /* works with IE */
+  -o-animation-fill-mode: forwards; /* works with Opera */
+  animation-fill-mode: forwards; /* should work with all browser .... in theory */
+}
+
+@include keyframes(slide-down) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(createFromLeft) {
+  0% {
+    -moz-transform: scale(0); /* Firefox */
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0); /* Opera */
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0); /* Safari And Chrome */
+    -webkit-transform-origin: 0 0;
+    transform: scale(0); /* Standard Property */
+    transform-origin: 0 0; /* Standard Property */
+  }
+  100% {
+    -moz-transform: scale(1); /* Firefox */
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1); /* Opera */
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1); /* Safari And Chrome */
+    -webkit-transform-origin: 0 0;
+    transform: scale(1); /* Standard Property */
+    transform-origin: 0 0; /* Standard Property */
+  }
+}
+
+@include keyframes(showFromBottom) {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -48px;
+    opacity: 1;
+  }
+}
+
+@include keyframes(showFromBottom) {
+  0% {
+    margin-top: 80px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@include keyframes(showFromBottomPosition) {
+  0% {
+    top: 80px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeOutHide) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+  }
+}
+
+@include keyframes(showDialog) {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+}
+
+@include keyframes(showAndHide) {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+    -moz-transform: scale(0); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(0); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(0); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(0); /* Standard Property */
+    transform-origin: center center;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+    -moz-transform: scale(1); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(1); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(1); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(1); /* Standard Property */
+    transform-origin: center center;
+  }
+}
+
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(scaleFromCenter) {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(0); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(0); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(0); /* Standard Property */
+    transform-origin: center center;
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1); /* Firefox */
+    -moz-transform-origin: center center;
+    -o-transform: scale(1); /* Opera */
+    -o-transform-origin: center center;
+    -webkit-transform: scale(1); /* Safari And Chrome */
+    -webkit-transform-origin: center center;
+    transform: scale(1); /* Standard Property */
+    transform-origin: center center;
+  }
+}
+
+@include keyframes(callAtention) {
+  0% {
+    background-color: #b5ddfd;
+    color: #403f3f;
+  }
+  100% {
+    background-color: #fff;
+    color: #707070;
+  }
+}
+
+@include keyframes(blockScrollBody) {
+  0% {
+    position: inherit;
+  }
+  100% {
+    position: fixed;
+  }
+}
+
+// Box sizing
+@mixin border-sizing() {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+$prefixes: -webkit-, -moz-, -o-, "";
+
+// Border radius custom
+@mixin border-radius-custom(
+  $topLeft: 0,
+  $topRight: 0,
+  $bottomRight: 0,
+  $bottomLeft: 0
+) {
+  @each $prefix in $prefixes {
+    @if $prefix == "-moz-" {
+      @if $topLeft != 0 {
+        -moz-border-radius-topleft: $topLeft;
+      }
+      @if $topRight != 0 {
+        -moz-border-radius-topright: $topRight;
+      }
+      @if $bottomRight != 0 {
+        -moz-border-radius-bottomright: $bottomRight;
+      }
+      @if $bottomLeft != 0 {
+        -moz-border-radius-bottomleft: $bottomLeft;
+      }
+    } @else {
+      @if $topLeft != 0 {
+        #{$prefix}border-top-left-radius: $topLeft;
+      }
+      @if $topRight != 0 {
+        #{$prefix}border-top-right-radius: $topRight;
+      }
+      @if $bottomRight != 0 {
+        #{$prefix}border-bottom-right-radius: $bottomRight;
+      }
+      @if $bottomLeft != 0 {
+        #{$prefix}border-bottom-left-radius: $bottomLeft;
+      }
+    }
+  }
+}
