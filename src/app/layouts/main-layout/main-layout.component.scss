@@ -1,6 +1,8 @@
 #main {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  overflow-x: hidden;
   #layout-container {
     display: flex;
     flex-direction: column;
@@ -25,7 +27,7 @@
       height: var(--space-32px);
       border-radius: var(--space-24px);
       margin: var(--space-8px) 0px;
-      
+
       .icon-class {
         width: var(--space-24px);
         height: var(--space-24px);
