@@ -19,18 +19,24 @@ const routes: Routes = [
     path: 'mission',
     component: MainLayoutComponent,
     loadChildren: () =>
-      import('./pages/home/home.module').then((m) => m.HomeModule),
+      import('./pages/mission/mission.module').then((m) => m.MissionModule),
   },
   {
     path: 'contact',
     component: MainLayoutComponent,
     loadChildren: () =>
-      import('./pages/home/home.module').then((m) => m.HomeModule),
+      import('./pages/contact/contact.module').then((m) => m.ContactModule),
+  },
+  {
+    path: 'profile',
+    component: MainLayoutComponent,
+    loadChildren: () =>
+      import('./pages/profile/profile.module').then((m) => m.ProfileModule),
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

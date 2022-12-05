@@ -5,16 +5,19 @@
       alt="Veterinaria Estrada"
       id="logo"
     />
-    <div class="options-container" *ngFor="let item of menuOptions">
-      <a (click)="optionClicked(item.url)">
-        <img
-          [src]="'/assets/Icons/' + item.icon + '.svg'"
-          alt="image"
-          class="icon-class"
-        />
-        <span class="tooltiptext">{{ item.label }}</span>
-      </a>
-    </div>
+    <section id="options-container">
+      <div class="option" *ngFor="let item of menuOptions">
+        <a (click)="optionClicked(item.url)">
+          <img
+            [src]="'/assets/Icons/' + item.icon + '.svg'"
+            alt="image"
+            class="icon-class"
+          />
+          <span class="tooltiptext">{{ item.label }}</span>
+        </a>
+      </div>
+    </section>
+    
   </div>
   <div id="main-container">
     <router-outlet></router-outlet>
