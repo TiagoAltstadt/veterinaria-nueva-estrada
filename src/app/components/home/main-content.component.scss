@@ -1,28 +1,44 @@
 #main-content-container {
   width: 100%;
-  height: fit-content;
+  height: 85vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   #main-slider {
     margin-top: var(--space-16px) auto;
-    width: 50%;
+    width: 49%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    #slider-container {
+      width: 90%;
+      margin-bottom: var(--space-8px);
+    }
+    #map-container {
+      width: 90%;
+      overflow: hidden;
+      border-radius: var(--space-8px);
+      border: 1px solid black;
+    }
   }
   #appointment-container {
-    width: 40%;
+    width: 49%;
+    height: 95%;
     border-radius: var(--space-8px);
     background-color: var(--color-brown);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: var(--space-8px);
-    h2{
+    h2 {
       width: fit-content;
       margin: auto;
     }
-    iframe{
+    iframe {
       border-radius: var(--space-8px);
     }
   }

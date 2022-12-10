@@ -1,0 +1,15 @@
+<div id="badge-main-content">
+  
+  <div *ngFor="let person of badgeData" class="single-badge">
+    <div class="image-container">
+      <img
+      [src]="'../../../../assets/Images/badges/' + person.imageName + '.jpg'"
+      alt="badge"
+    />
+    </div>
+    <div class="text-container">
+      <h3>{{ person.name }}</h3>
+    <span>{{ person.description }} </span>
+    </div>
+  </div>
+</div>

@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SliderData } from '../generic/slider/slider.component';
 
-export interface SliderData {
-  label: string;
-  id: number;
-  image: string;
-}
 @Component({
   selector: 'app-main-content',
   templateUrl: './main-content.component.html',
@@ -33,6 +29,7 @@ export class MainContentComponent implements OnInit {
       image: '../../../../assets/Images/misc/perro.jpg',
     },
   ];
+
   constructor() {}
 
   ngOnInit(): void {}

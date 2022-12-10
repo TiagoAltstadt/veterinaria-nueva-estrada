@@ -1,0 +1,49 @@
+#badge-main-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  .single-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    height: 400px;
+    width: 15%;
+
+    background-color: var(--color-white);
+    border-radius: var(--space-8px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    .image-container {
+      height: 50%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+        border-radius: var(--space-8px);
+      }
+    }
+    .text-container {
+      height: 50%;
+      padding: var(--space-8px);
+      overflow: hidden;
+      h3 {
+        width: fit-content;
+        margin: var(--space-8px) auto;
+      }
+      span {
+        width: fit-content;
+        margin: var(--space-8px) auto;
+        text-align: left;
+      }
+    }
+  }
+}
