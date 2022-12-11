@@ -10,7 +10,6 @@ import { MissionComponent } from './mission/mission.component';
 import { ContactComponent } from './contact/contact.component';
 import { BadgeComponent } from './generic/badge/badge.component';
 import { WorkInProgressComponent } from './generic/work-in-progress/work-in-progress.component';
-import { environment } from 'src/environments/environment';
 
 const components: any[] = [
   TopbarComponent,
@@ -24,11 +23,7 @@ const components: any[] = [
   BadgeComponent,
   WorkInProgressComponent,
 ];
-const modules: any[] = [
-  RouterModule,
-  CommonModule,
-  
-];
+const modules: any[] = [RouterModule, CommonModule];
 @NgModule({
   imports: [...modules],
   declarations: [...components],
