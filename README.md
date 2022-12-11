@@ -1,27 +1,24 @@
-# VeterinariaEstrada
+# 🐾 Veterinaria Nueva Estrada 🐾
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+## Que es esto?
 
-## Development server
+- Veterinaria Nueva Estrada es un proyecto basado en Angular, con estilo Scss y de momento eso es todo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Para empezar
 
-## Code scaffolding
+- Clonar el repo (claramente)
+- `npm install`
+- Thats pretty much it
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Para subirlo
 
-## Build
+- `git add .`
+- `git commit -m "tag/ Description"` (tag basicamente puede ser fix, update, o algo semejante, fijate que la descripcion este copada, y en ingle no seas paja)
+- `git push`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Para Deploy
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- La idea, al menos de momento, es que estamos haciendo deploy a Github-pages, entonces el rpoceso es el sigueinte: una vex commiteado y pusheado todo, en angular.json -> projects -> veterinaria-estrada -> architect -> options -> outputPath: debe estar "docs". Ahi se va a buildear el proyecto.
+- Despues, index.html en el tag base debe decir `href="/veterinaria-estrada-deploy/"`, pero para correrlo en local debe decir `href="/"`.
+- Asi que nada, ahora buildeamos con `ng build --base-href=/veterinaria-estrada-deploy/`, esto va a generar el build de angular en la carpeta docs.
+- A esta carpeta entramos con la consola y pusheamos con `git push https://github.com/TiagoAltstadt/veterinaria-estrada-deploy.git`
