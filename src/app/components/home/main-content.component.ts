@@ -11,22 +11,22 @@ export class MainContentComponent implements OnInit {
     {
       id: 1,
       label: 'Clinica Nueva Estrada',
-      image: '../../../../assets/Images/misc/clinicaBanner.jpg',
+      image: 'assets/Images/misc/clinicaBanner.jpg',
     },
     {
       id: 2,
       label: 'Nuesto Consultorio',
-      image: '../../../../assets/Images/misc/consultorio.jpg',
+      image: 'assets/Images/misc/consultorio.jpg',
     },
     {
       id: 3,
       label: 'Un gato',
-      image: '../../../../assets/Images/misc/gato.jpg',
+      image: 'assets/Images/misc/gato.jpg',
     },
     {
       id: 3,
       label: 'Un perro',
-      image: '../../../../assets/Images/misc/perro.jpg',
+      image: 'assets/Images/misc/perro.jpg',
     },
   ];
 
