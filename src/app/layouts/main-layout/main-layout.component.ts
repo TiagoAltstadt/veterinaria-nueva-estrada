@@ -13,13 +13,13 @@ export interface MenuOptions {
   styleUrls: ['./main-layout.component.scss'],
 })
 export class MainLayoutComponent implements OnInit {
-  logo: string = '../../../assets/Images/Logos/rounded-logo.png';
+  logo: string = 'assets/Images/Logos/rounded-logo.png';
   menuOptions: MenuOptions[] = [
     {
       id: 1,
       icon: 'home-icon',
       label: 'Inicio',
-      url: '/home',
+      url: '/',
     },
     {
       id: 2,
