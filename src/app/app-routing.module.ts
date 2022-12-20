@@ -4,7 +4,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: MainLayoutComponent,
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
