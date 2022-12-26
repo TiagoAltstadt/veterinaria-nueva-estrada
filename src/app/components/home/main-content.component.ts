@@ -29,8 +29,15 @@ export class MainContentComponent implements OnInit {
       image: 'assets/Images/misc/perro.jpg',
     },
   ];
+  loading: boolean = true;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
+
+  myLoadEvent() {
+    this.loading = false;
+    console.log('asd');
+    
+  }
 }

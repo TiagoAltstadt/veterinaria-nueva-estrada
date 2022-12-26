@@ -30,6 +30,11 @@
       border-radius: var(--space-8px);
       border: 1px solid black;
       background-color: var(--color-black);
+      img {
+        object-fit: cover;
+        margin: auto;
+        width: 98%;
+      }
       iframe {
         border-radius: var(--space-8px);
       }
