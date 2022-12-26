@@ -1,10 +1,7 @@
 <section id="main">
+  <!---------- Layout ---------->
   <div id="layout-container">
-    <img
-      [src]="logo"
-      alt="Veterinaria Estrada"
-      id="logo"
-    />
+    <img [src]="logo" alt="Veterinaria Estrada" id="logo" />
     <section id="options-container">
       <div class="option" *ngFor="let item of menuOptions">
         <a (click)="optionClicked(item.url)">
@@ -17,9 +14,15 @@
         </a>
       </div>
     </section>
-    
   </div>
+  <!---------- Main Content (Dynamic)---------->
   <div id="main-container">
     <router-outlet></router-outlet>
+  </div>
+  <!---------- Background Waves---------->
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
   </div>
 </section>

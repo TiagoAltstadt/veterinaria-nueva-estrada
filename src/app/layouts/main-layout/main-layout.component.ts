@@ -39,12 +39,12 @@ export class MainLayoutComponent implements OnInit {
       label: 'Contactanos',
       url: '/contact',
     },
-    {
-      id: 4,
-      icon: 'user',
-      label: 'Usuario',
-      url: '/profile',
-    },
+    // {
+    //   id: 4,
+    //   icon: 'user',
+    //   label: 'Usuario',
+    //   url: '/profile',
+    // },
   ];
   constructor(private router: Router) {}
 
