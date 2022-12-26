@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface BadgeData {
   name: string;
+  id: number;
   description: string;
   imageName: string;
+  state: boolean;
 }
 
 @Component({
@@ -12,47 +14,44 @@ export interface BadgeData {
   styleUrls: ['./new-badge.component.scss'],
 })
 export class NewBadgeComponent implements OnInit {
+  @Input() badgeData: BadgeData[] | undefined;
+  @Input() selectedId: number | undefined;
+  @Output() selectedBadge: EventEmitter<BadgeData> =
+    new EventEmitter<BadgeData>();
 
-  //--------------------Variables--------------------
-  badgeData: BadgeData[] = [
-    {
-      name: 'Nicolas',
-      description:
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,  voluptas perspiciatis? Excepturi doloremque ipsa praesentium dignissimosofficiis voluptate.',
-      imageName: 'nicoBadge',
-    },
-    {
-      name: 'Fabio',
-      description:
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,  voluptas perspiciatis? Excepturi doloremque ipsa praesentium dignissimosofficiis voluptate.',
-      imageName: 'docBadge',
-    },
-    {
-      name: 'Cris',
-      description:
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,  voluptas perspiciatis? Excepturi doloremque ipsa praesentium dignissimosofficiis voluptate.',
-      imageName: 'crisBadge',
-    },
-    {
-      name: 'Caro',
-      description:
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,  voluptas perspiciatis? Excepturi doloremque ipsa praesentium dignissimosofficiis voluptate.',
-      imageName: 'caroBadge',
-    },
-    {
-      name: 'Natalia',
-      description:
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,  voluptas perspiciatis? Excepturi doloremque ipsa praesentium dignissimosofficiis voluptate.',
-      imageName: 'docBadge',
-    },
-    {
-      name: 'Cynthia',
-      description:
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,  voluptas perspiciatis? Excepturi doloremque ipsa praesentium dignissimosofficiis voluptate.',
-      imageName: 'docBadge',
-    },
-  ];
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    
+  }
+  ngOnChanges() {
+    if (this.badgeData && this.selectedId) {
+      var aux = this.badgeData.find((element) => element.id == this.selectedId);
+
+      this.badgeData.forEach((element) => {
+        if (aux && element.id == aux.id) {
+          aux.state = true;
+          element = aux;
+        } else {
+          element.state = false;
+        }
+      });
+    }
+  }
+  badgeClicked(badge: BadgeData) {
+    this.selectedBadge.emit(badge);
+
+    if (this.badgeData && this.selectedId) {
+      var aux = this.badgeData.find((element) => element.id == badge.id);
+
+      this.badgeData.forEach((element) => {
+        if (aux && element.id == aux.id) {
+          aux.state = true;
+          element = aux;
+        } else {
+          element.state = false;
+        }
+      });
+    }
+  }
 }

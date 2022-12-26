@@ -1,9 +1,21 @@
 <app-topbar title="Sobre Nosotros"></app-topbar>
 <section id="main-content-container">
-  <!-- <div style="width: 60%">
-    <app-work-in-progress></app-work-in-progress>
-  </div> -->
-  <!-- <app-badge></app-badge>
-   -->
-   <app-new-badge></app-new-badge>
+  <div id="dropdown-container">
+    <label for="dropdown">Conoce a nuestro equipo: </label>
+    <select
+      name="dropdown"
+      id="team-dropdown"
+      [(ngModel)]="selectedItem"
+      (ngModelChange)="selectedOption($event)"
+    >
+      <option *ngFor="let badge of badgeData" value="{{ badge.id }}">
+        {{ badge.name }}
+      </option>
+    </select>
+  </div>
+  <app-new-badge
+    [badgeData]="badgeData"
+    [selectedId]="selectedId"
+    (selectedBadge)="selectedBadge($event)"
+  ></app-new-badge>
 </section>

@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BadgeComponent } from './generic/badge/badge.component';
 import { WorkInProgressComponent } from './generic/work-in-progress/work-in-progress.component';
 import { NewBadgeComponent } from './generic/new-badge/new-badge.component';
+import { FormsModule } from '@angular/forms';
 
 const components: any[] = [
   TopbarComponent,
@@ -24,7 +25,7 @@ const components: any[] = [
   BadgeComponent,
   WorkInProgressComponent,
 ];
-const modules: any[] = [RouterModule, CommonModule];
+const modules: any[] = [RouterModule, CommonModule, FormsModule];
 @NgModule({
   imports: [...modules],
   declarations: [...components, NewBadgeComponent],

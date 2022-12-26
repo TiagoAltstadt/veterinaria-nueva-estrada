@@ -1,12 +1,10 @@
 <section id="main-container">
-  <span id="title">Conoce a nuestro equipo</span>
-  <select name="team" id="team-dropdown">
-    <option *ngFor="let badge of badgeData" value="{{ badge.name }}">
-      {{ badge.name }}
-    </option>
-  </select>
   <div id="cards-container">
-    <section id="card-container" *ngFor="let badge of badgeData">
+    <section
+      class="{{ badge.state ? 'card-container-activated' : 'card-container' }}"
+      *ngFor="let badge of badgeData"
+      (click)="badgeClicked(badge)"
+    >
       <div id="image-container">
         <img
           [src]="'assets/Images/badges/' + badge.imageName + '.jpg'"
@@ -14,7 +12,7 @@
         />
       </div>
       <span id="name-title"
-        ><p>{{ badge.name }}</p></span
+        ><p>{{ badge.name }} & {{ badge.state }}</p></span
       >
     </section>
   </div>

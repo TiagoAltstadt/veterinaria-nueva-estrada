@@ -9,13 +9,6 @@
   align-items: center;
   flex-wrap: nowrap;
 
-  #title {
-    font-size: var(--font-24px);
-  }
-  #team-dropdown {
-    margin-top: var(--space-16px);
-  }
-
   #cards-container {
     margin-top: 5%;
     display: flex;
@@ -25,8 +18,8 @@
     align-items: center;
     width: 90%;
     gap: 8px;
-    #card-container {
-        width: 30%;
+    .card-container {
+      width: 30%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -59,13 +52,70 @@
         }
       }
     }
-    #card-container:hover {
+    .card-container-activated {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
       height: calc(var(--height-image) + 20px);
       position: relative;
       transform: translateY(-15%);
       transition: 0.5s;
       overflow: hidden;
       filter: saturate(1);
+      #image-container {
+        height: var(--height-image);
+        overflow: hidden;
+
+        img {
+          float: left;
+          aspect-ratio: 9/16;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+      #name-title {
+        justify-content: center;
+        align-items: center;
+        padding-top: var(--space-8px);
+        p {
+          width: fit-content;
+          margin: auto 0;
+          font-size: var(--font-16px);
+        }
+      }
+    }
+    .card-container:hover {
+      height: calc(var(--height-image) + 20px);
+      position: relative;
+      transform: translateY(-15%);
+      transition: 0.5s;
+      overflow: hidden;
+      filter: saturate(1);
+      #image-container {
+        height: var(--height-image);
+        overflow: hidden;
+
+        img {
+          float: left;
+          aspect-ratio: 9/16;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+      #name-title {
+        justify-content: center;
+        align-items: center;
+        padding-top: var(--space-8px);
+        p {
+          width: fit-content;
+          margin: auto 0;
+          font-size: var(--font-16px);
+        }
+      }
     }
   }
 }
