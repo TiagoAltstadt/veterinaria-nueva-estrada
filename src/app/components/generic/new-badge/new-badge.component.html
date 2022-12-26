@@ -1,0 +1,21 @@
+<section id="main-container">
+  <span id="title">Conoce a nuestro equipo</span>
+  <select name="team" id="team-dropdown">
+    <option *ngFor="let badge of badgeData" value="{{ badge.name }}">
+      {{ badge.name }}
+    </option>
+  </select>
+  <div id="cards-container">
+    <section id="card-container" *ngFor="let badge of badgeData">
+      <div id="image-container">
+        <img
+          [src]="'assets/Images/badges/' + badge.imageName + '.jpg'"
+          alt="badge"
+        />
+      </div>
+      <span id="name-title"
+        ><p>{{ badge.name }}</p></span
+      >
+    </section>
+  </div>
+</section>

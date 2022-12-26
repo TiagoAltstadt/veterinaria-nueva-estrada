@@ -35,7 +35,7 @@ export class MainLayoutComponent implements OnInit {
     },
     {
       id: 4,
-      icon: 'contact',
+      icon: 'at',
       label: 'Contactanos',
       url: '/contact',
     },
