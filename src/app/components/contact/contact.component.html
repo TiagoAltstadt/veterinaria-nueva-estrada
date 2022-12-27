@@ -1,6 +1,22 @@
 <app-topbar title="Contacto"></app-topbar>
 <section id="main-content-container">
-  <div style="width: 60%">
-    <app-work-in-progress></app-work-in-progress>
+  <div id="contact-methods">
+    <div class="content-container" *ngFor="let element of contactInformation">
+      <div class="icon-container">
+        <a [href]="element.link">
+          <img
+            [src]="'assets/Icons/' + element.icon + '.svg'"
+            alt="image"
+            class="icon-class"
+          />
+        </a>
+      </div>
+      <div class="information-container">
+        <div class="title" [ngStyle]="{ color: element.color }">
+          <a [href]="element.link">{{ element.title }}</a>
+        </div>
+        <div class="description">{{ element.description }}</div>
+      </div>
+    </div>
   </div>
 </section>
